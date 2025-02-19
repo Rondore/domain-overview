@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>Site Checker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="group-domain" class="group">
+        <div class="header">
+            <h1>Domain</h1>
+            <form id="main-form">
+                Domain Name: <input id="domainField"><button type="submit">Run All</button><button id="clear-domain">Clear</button><button id="whatcms">What CMS</button><button id="gtm">GTMetrix</button><button id="dom-rbl">Check RBL</button><button id="ssl-labs">SSL Labs</button><button id="hsts">HSTS</button>
+            </form>
+            <hr />
+        </div>
+        <div class="section domain-section half-width">
+            <h3>Google DNS</h3>
+            <div class="frame-container">
+                <pre class="frame domain-frame" data-url="dns.php"></pre>
+            </div>
+        </div>
+        <div class="section domain-section half-width last-half-width">
+            <h3>Instant DNS</h3>
+            <div class="frame-container">
+                <pre class="frame domain-frame" data-url="instantDns.php"></pre>
+            </div>
+        </div>
+        <div id="registration-section" class="section domain-section">
+            <h3>Registration</h3>
+            <div class="frame-container">
+                <pre class="frame domain-frame" data-url="registration.php"></pre>
+            </div>
+        </div>
+        <div class="section domain-section">
+            <h3>Mail</h3>
+            DKIM Selector: <input id="dkim-selector" value="default"></input><br>
+            <div class="frame-container">
+                <pre class="frame domain-frame" data-url="mail.php"></pre>
+            </div>
+        </div>
+        <div id="hostname-section" class="section domain-section">
+            <h3>Hostname</h3>
+            <div class="frame-container">
+                <pre class="frame domain-frame" data-url="hostname.php"></pre>
+            </div>
+        </div>
+        <div id="ssl-section" class="section domain-section">
+            <h3>SSL</h3>
+            <div class="frame-container">
+                <pre class="frame domain-frame" data-url="ssl.php"></pre>
+            </div>
+        </div>
+        <div class="section domain-section">
+            <h3>Server/Site</h3>
+            <div class="frame-container">
+                <pre class="frame domain-frame" data-url="server.php"></pre>
+            </div>
+        </div>
+        <div class="section domain-section">
+            <h3>Initial Propagation</h3>
+            <div class="frame-container">
+                <pre class="frame domain-frame" data-url="prop.php"></pre>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="group-ip" class="group">
+        <div class="header">
+            <h1>IP</h1>
+            <form id="ip-form">
+                IP Address: <input id="ipField"><button type="submit">Run All</button><button id="clear-ip">Clear</button><button id="rbl">Check RBL</button>
+            </form>
+            <span>(IMH agents, you will need <a href="quickclarity.js">this</a> tampermonkey script for clarity.)</span>
+            <hr />
+        </div>
+        <div class="section ip-section">
+            <h3>PTR</h3>
+            <div class="frame-container">
+                <pre class="frame ip-frame" data-url="ptr.php"></pre>
+            </div>
+        </div>
+        <div class="section ip-section">
+            <h3>whois</h3>
+            <div class="frame-container">
+                <pre class="frame ip-frame" data-url="whoisIp.php"></pre>
+            </div>
+        </div>
+    </div>
+    
+    <div id="source-code">
+        <h4>Source Code</h4>
+        <span class="source-link"><a href="dns.sh">DNS</a></span>
+        <span class="source-link"><a href="instantDns.sh">Instant DNS</a></span>
+        <span class="source-link"><a href="registration.sh">Registration</a></span>
+        <span class="source-link"><a href="mail.sh">Mail</a></span>
+        <span class="source-link"><a href="hostname.sh">Hostname</a></span>
+        <span class="source-link"><a href="ssl.sh">SSL</a></span>
+        <span class="source-link"><a href="server.sh">Server/Site</a></span>
+        <span class="source-link"><a href="prop.sh">Propagation</a></span>
+        <span class="source-link"><a href="ptr.sh">PTR</a></span>
+        <span class="source-link"><a href="whoisIp.sh">Whois IP</a></span>
+        <p>&copy; Sean Walter</p>
+    </div>
+</body>
+</html>
