@@ -1,0 +1,1 @@
+While working at a webhosting company. I created a slew of bash scripts. Later I took some of the DNS related ones, wrote some PHP wrappers, and added them to a webpage for faster lookups. I still use this tool today to troubleshoot DNS issues and investigate websites.
